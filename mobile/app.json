@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Inventory Voice Assistant",
+    "slug": "inventory-voice-assistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "splash": {
+      "backgroundColor": "#0B1220"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.abproject.inventoryvoice",
+      "bitcode": false
+    },
+    "android": {
+      "package": "com.abproject.inventoryvoice",
+      "permissions": [
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK",
+        "android.permission.BLUETOOTH"
+      ]
+    },
+    "plugins": [
+      "@livekit/react-native-expo-plugin",
+      "@config-plugins/react-native-webrtc",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "65a2a10a-fa20-4376-9820-001863d9e2ed"
+      }
+    }
+  }
+}

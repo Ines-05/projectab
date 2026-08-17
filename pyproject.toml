@@ -1,0 +1,24 @@
+[project]
+name = "speech-agent"
+version = "0.1.0"
+description = "LiveKit voice agent for blind-accessible retail inventory management"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.141.1",
+    "google-genai>=2.18.1",
+    "livekit-agents[google,images]~=1.5",
+    "python-dotenv>=1.2.2",
+    "supabase>=2.31.0",
+    "uvicorn[standard]>=0.52.3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "psycopg[binary]>=3.3.4",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
